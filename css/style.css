@@ -1,0 +1,159 @@
+/*  ESTILOS CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+.body{
+    background-color:rgb(110, 68, 26);
+    background-image: url(../img/bg.jpg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    cursor: url(../img/puntero.png), pointer;
+
+}
+
+.img-box{
+    
+    background-image: url(../img/box_1.png);
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    width: 420px; 
+    height: 289px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+#borrar, #pegar, #cifrar, #decifrar, #copiar {
+    cursor: url(../img/puntero.png), pointer;
+    /* background-color: rgba(80, 235, 66, 0.459); */
+    font-family: 'Fredoka One', cursive;
+    background-color: rgba(80, 235, 66, 0.644);
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(180, 93, 52);  /*  Color Borde y Grosor Borde*/
+    -webkit-text-fill-color: rgb(255, 255, 255); /* Fondo letras transparentes */
+    border-radius: 10px;
+    font-size: 15px;
+
+    border-radius: 11px;
+    border: none;
+
+    transition: background-color .3s;  /* Transicion de color y tiempo :hover */
+}
+
+#borrar:hover, #pegar:hover, #cifrar:hover, #decifrar:hover, #copiar:hover {
+    background-color: gold;        /* Transicion de Color  */
+}
+
+
+
+.box-1{
+
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.box-2{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+#mensaje{
+    
+    cursor: url(../img/puntero.png), pointer;
+    background-color:rgba(255, 255, 255, 0.562);
+    font-weight: bold;
+    color: rgb(131, 38, 38);
+    border: none;
+    
+    border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    /* outline: 0 none; */
+    outline-color: rgb(197, 112, 0);
+
+    border-radius: 11px;
+    margin: 65px 0px 12px 0px;
+    padding: 3px 0px 0px 10px;
+
+}
+
+
+#resultado{
+
+    cursor: url(../img/puntero.png), pointer;
+    background-color:rgba(255, 255, 255, 0.562);
+    font-weight: bold;
+    color: rgb(131, 38, 38);
+    border: none;
+    border-radius: 11px;
+    margin: 65px 0px 12px 0px;
+    padding: 3px 0px 0px 10px;
+
+    border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline-color: rgb(197, 112, 0);
+    
+}
+
+.label{
+    padding: 10px 0px 0px 0px;
+}
+
+#label{
+
+    cursor: url(../img/puntero.png), pointer;
+    font-family: 'Fredoka One', cursive;
+    /* color: rgb(202, 122, 69); */
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(175, 94, 69);   /*  Color Borde y Grosor Borde*/
+    -webkit-text-fill-color: rgb(255, 255, 255); /* Fondo letras transparentes */
+    /* background-color:rgba(163, 77, 77, 0.788); */
+    /* border-radius: 5px 5px 5px 5px; */
+    font-size: 20px;
+    user-select:none;
+}
+
+
+/* Animacion CSS para Label */
+   
+   #label span { display:inline-block; animation:float .30s ease-in-out infinite; }
+    @keyframes float {
+     0%,100%{ transform:none; }
+     33%{ transform:translateY(-1px) rotate(-2deg); }
+     66%{ transform:translateY(1px) rotate(2deg); }
+   }
+   body:hover span { animation:bounce .6s; }
+   @keyframes bounce {
+     0%,100%{ transform:translate(0); }
+     25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+     50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+   }
+   
+   span:nth-child(4n) { color:hsl(50, 75%, 55%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+   span:nth-child(4n-1) { color:hsl(115, 100%, 69%); text-shadow:1px 1px hsl(86, 67%, 51%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+   span:nth-child(4n-2) { color:hsl(106, 68%, 63%); text-shadow:1px 1px hsl(103, 56%, 48%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+   span:nth-child(4n-3) { color:hsl(30, 65%, 60%); text-shadow:1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+   
+   #label span:nth-child(2){ animation-delay:.05s; }
+   #label span:nth-child(3){ animation-delay:.1s; }
+   #label span:nth-child(4){ animation-delay:.15s; }
+   #label span:nth-child(5){ animation-delay:.2s; }
+   #label span:nth-child(6){ animation-delay:.25s; }
+   #label span:nth-child(7){ animation-delay:.3s; }
+   #label span:nth-child(8){ animation-delay:.35s; }
+   #label span:nth-child(9){ animation-delay:.4s; }
+   #label span:nth-child(10){ animation-delay:.45s; }
+   #label span:nth-child(11){ animation-delay:.5s; }
+   #label span:nth-child(12){ animation-delay:.55s; }
+   #label span:nth-child(13){ animation-delay:.6s; }
+   #label span:nth-child(14){ animation-delay:.65s; }
+
+/* Fin de Animacion de texto */
