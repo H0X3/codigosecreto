@@ -9,38 +9,43 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-
 <body class="body">
-  
-  <!-- <input id="play" type="button" value="" onclick="" />  -->
  
   <div class="box-1">
+    <div class="play" onclick="play();"></div>
+ 
 
     <div class="img-box">
+
     <div class="label" >
 
-    <label for="message" id="label"> <!-- <strong>M E N S A J E</strong>  -->
+    <label for="message" id="label">
     <span>M</span> <span>E</span> <span>N</span> <span>S</span> <span>A</span> <span>J</span> <span>E</span>
     </label> 
 
     <br /> 
-
     </div>
 
-    <textarea id="mensaje" name="message" rows="7" cols="30" maxlength="1000" required="required"></textarea><br />
-    <!-- <span id="message_validation" class="error_message"></span> -->
+    <textarea id="mensaje" name="message" placeholder="escribe tu mensaje..." rows="7" cols="30" maxlength="1000" required="required" ></textarea><br />
     
     
     <input id="cifrar" type="button" value="CIFRAR" onclick="encriptar();" />
+    
+
+
 
     <input id="decifrar" type="button" value="DECIFRAR" onclick="desencriptar();" />
-
+ 
     <input id="pegar" type="button" value="PEGAR" onclick="pegar();" />
+   
     <input id="borrar" type="button" value="BORRAR" onclick="borrar('arriba');" />
 
   </div>
+  
 
 </div>
+
+
 
 
   <div class="box-2">
@@ -48,7 +53,7 @@
     <div class="img-box">
 
     <div class="label" >
-    <label for="message" id="label"><!-- <strong>R E S U L T A D O</strong> --> 
+    <label for="message" id="label">
     
     <span>R</span> <span>E</span> <span>S</span> <span>U</span> <span>L</span> <span>T</span> <span>A</span> <span>D</span>
     <span>O</span>
@@ -61,15 +66,15 @@
     <textarea id="resultado" name="message" rows="7" cols="30" readonly></textarea><br />
     <!-- <span id="message_validation" class="error_message"></span> -->
 
-  <input id="copiar" type="button" value="COPIAR" onclick="copiar();" />&nbsp;&nbsp;
-  <input id="borrar" type="button" value="BORRAR" onclick="borrar();" />
+  <input class="sonido" id="copiar" type="button" value="COPIAR" onclick="copiar();" />&nbsp;&nbsp;
+  <input class="sonido" id="borrar_" type="button" value="BORRAR" onclick="borrar();" />
 
   </div>
 
 </div>
 
+
 <script src="js/script.js"></script>
 
-  
 </body>
 </html>

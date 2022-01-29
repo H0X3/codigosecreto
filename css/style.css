@@ -29,7 +29,7 @@
 
 }
 
-#borrar, #pegar, #cifrar, #decifrar, #copiar {
+#borrar, #borrar_, #pegar, #cifrar, #decifrar, #copiar {
     cursor: url(../img/puntero.png), pointer;
     /* background-color: rgba(80, 235, 66, 0.459); */
     font-family: 'Fredoka One', cursive;
@@ -44,24 +44,29 @@
     border: none;
 
     transition: background-color .3s;  /* Transicion de color y tiempo :hover */
+
 }
 
-#borrar:hover, #pegar:hover, #cifrar:hover, #decifrar:hover, #copiar:hover {
+#borrar:hover, #borrar_:hover, #pegar:hover, #cifrar:hover, #decifrar:hover, #copiar:hover {
     background-color: gold;        /* Transicion de Color  */
 }
 
+::placeholder {
+    color: rgba(128, 88, 56, 0.5); 
+}
 
 
 .box-1{
 
     margin: 1rem;
-    padding: 1rem;
+    padding: 0rem;
     text-align: center;
+    position: relative;  /* Div Padre para posicionar */
 }
 
 .box-2{
     margin: 1rem;
-    padding: 1rem;
+    padding: 0rem;
     text-align: center;
 }
 
@@ -120,6 +125,47 @@
     font-size: 20px;
     user-select:none;
 }
+
+.play{
+    cursor: url(../img/puntero.png), pointer;
+    background-image: url(../img/play.png);
+    width: 60px; 
+    height: 60px;
+    
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.76)inset, 0 0 8px rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+
+    margin: 20px 0px 0px 30px;
+    display: flex;
+    position: absolute; /* Div hijo para posicionar */
+
+}
+
+.stop{
+    cursor: url(../img/puntero.png), pointer;
+    background-image: url(../img/stop.png);
+    width: 60px; 
+    height: 60px;
+    
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.76)inset, 0 0 8px rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+
+    margin: 20px 0px 0px 30px;
+    display: flex;
+    position: absolute; /* Div hijo para posicionar */
+
+}
+
 
 
 /* Animacion CSS para Label */
