@@ -72,6 +72,7 @@ function musica(set){
 
     let etiquetaAudio = document.querySelector("audio");
     etiquetaAudio.setAttribute("src", "sound/adhesive_womba.mp3");
+    etiquetaAudio.loop = true;
     etiquetaAudio.play();
 
   }else{
