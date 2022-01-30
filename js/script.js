@@ -67,8 +67,44 @@ function sonido(){
     etiquetaAudio.play();
 }
 
-function play(){
-  var imagen = document.getElementById("imagen");
-  imagen.style.backgroundImage = "url('tuUrl')";
+function musica(set){
+  if (set=="play"){
 
+    let etiquetaAudio = document.querySelector("audio");
+    etiquetaAudio.setAttribute("src", "sound/adhesive_womba.mp3");
+    etiquetaAudio.play();
+
+  }else{
+
+    let etiquetaAudio = document.querySelector("audio");
+    etiquetaAudio.pause();
+
+  }
+  
 }
+
+
+function play_music(){
+
+  let mono = document.querySelector(".mono");
+  let mono_ = document.querySelector(".mono_");
+  let icono = document.getElementById("icono");
+
+  if (icono.src.match("play")){
+    icono.src ="./img/stop.png"
+    musica("play");
+    mono.style.display = "flex";
+    mono_.style.display = "flex";
+  }
+  else{
+    icono.src ="./img/play.png"
+    musica("stop");
+    mono.style.display = "none";
+    mono_.style.display = "none";
+  }
+}
+
+// document.getElementById("imagen");
+// document.createElement("audio");
+// document.querySelector("audio");
+// document.getElementsByClassName();

@@ -10,9 +10,14 @@
 </head>
 
 <body class="body">
+
+  
+  <audio id="musica" src=""></audio>
  
   <div class="box-1">
-    <div class="play" onclick="play();"></div>
+
+    
+    <div class="play" onclick="play_music();"> <img id="icono" src="./img/play.png"> </div>
  
 
     <div class="img-box">
@@ -26,13 +31,21 @@
     <br /> 
     </div>
 
-    <textarea id="mensaje" name="message" placeholder="escribe tu mensaje..." rows="7" cols="30" maxlength="1000" required="required" ></textarea><br />
+    <div class="bird-container bird-container--one"> <!-- Aves 1 -->
+      <div class="bird bird--one"></div>
+    </div>
     
+    <div class="bird-container bird-container--two"> <!-- Aves 2 -->
+      <div class="bird bird--two"></div>
+    </div>
+
+    <textarea id="mensaje" spellcheck="false" name="message" placeholder="escribe tu mensaje..." rows="7" cols="30" maxlength="1000" required="required" ></textarea><br />
+    
+   <!-- Aqui estaba -->
     
     <input id="cifrar" type="button" value="CIFRAR" onclick="encriptar();" />
     
-
-
+    
 
     <input id="decifrar" type="button" value="DECIFRAR" onclick="desencriptar();" />
  
@@ -41,10 +54,8 @@
     <input id="borrar" type="button" value="BORRAR" onclick="borrar('arriba');" />
 
   </div>
-  
 
 </div>
-
 
 
 
@@ -63,8 +74,13 @@
     <br />
     </div>
 
-    <textarea id="resultado" name="message" rows="7" cols="30" readonly></textarea><br />
+
+    <textarea id="resultado" name="message" spellcheck="false" rows="7" cols="30" readonly></textarea><br />
     <!-- <span id="message_validation" class="error_message"></span> -->
+
+
+    <div class="mono" > <img src="./img/mono.gif"> </div>
+    <div class="mono_" > <img src="./img/mono.gif"> </div>
 
   <input class="sonido" id="copiar" type="button" value="COPIAR" onclick="copiar();" />&nbsp;&nbsp;
   <input class="sonido" id="borrar_" type="button" value="BORRAR" onclick="borrar();" />
@@ -72,7 +88,11 @@
   </div>
 
 </div>
-
+<script>
+let aves_sound = document.querySelector("audio");
+aves_sound.setAttribute("src", "sound/aves.mp3");
+aves_sound.play();
+</script>
 
 <script src="js/script.js"></script>
 
